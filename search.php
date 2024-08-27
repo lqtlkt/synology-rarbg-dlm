@@ -4,7 +4,7 @@
 */
 
 class synologyDLM_RARBG {
-  private $host_url = 'https://rarbg.to/torrents.php';      
+  private $host_url = 'https://www2.rarbggo.to/search';      
   private $qurl = '?search=%s&order=seeders&by=DESC';
   
   public function __construct() {
@@ -75,7 +75,7 @@ class synologyDLM_RARBG {
     */
     $links = $data->getElementsByTagName('a');
     $aTag = $links->item(0)->getAttribute('href'); // first is rarbg, second is imdb tag if any
-    return "http://rarbg.to".$aTag;
+  return "http://www2.rarbggo.to".$aTag;
   }
 
   public function prepare($curl, $query) {
